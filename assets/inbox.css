@@ -1,0 +1,362 @@
+.corsivo-mail-inbox {
+	--corsivo-mail-inbox-border: #dcdcde;
+	--corsivo-mail-inbox-border-soft: #f0f0f1;
+	--corsivo-mail-inbox-surface: #fff;
+	--corsivo-mail-inbox-surface-muted: #fafafa;
+	--corsivo-mail-inbox-surface-active: #f0f6fc;
+	--corsivo-mail-inbox-text-muted: #646970;
+	--corsivo-mail-inbox-accent: #2271b1;
+	--corsivo-mail-inbox-danger: #b32d2e;
+}
+
+.corsivo-mail-inbox__notice {
+	margin: 0 0 12px;
+}
+
+.corsivo-mail-inbox__layout {
+	display: flex;
+	height: 74vh;
+	margin-block-start: 12px;
+	overflow: hidden;
+	border: 1px solid var(--corsivo-mail-inbox-border);
+	background: var(--corsivo-mail-inbox-surface);
+}
+
+.corsivo-mail-inbox__rail {
+	box-sizing: border-box;
+	width: 200px;
+	flex: 0 0 200px;
+	padding: 16px;
+	border-inline-end: 1px solid var(--corsivo-mail-inbox-border);
+	background: var(--corsivo-mail-inbox-surface-muted);
+}
+
+.corsivo-mail-inbox__rail-action,
+.corsivo-mail-inbox__rail-link {
+	width: 100%;
+	justify-content: center;
+}
+
+.corsivo-mail-inbox__rail-link {
+	justify-content: flex-start;
+	font-weight: 600;
+}
+
+.corsivo-mail-inbox__rail-link.is-active {
+	background: #eef3f8;
+}
+
+.corsivo-mail-inbox__account {
+	margin-block-start: 16px;
+}
+
+.corsivo-mail-inbox__account + .corsivo-mail-inbox__rail-action {
+	margin-block-start: 8px;
+}
+
+.corsivo-mail-inbox__compose-trigger {
+	margin-block-end: 16px;
+}
+
+.corsivo-mail-inbox__message-list {
+	display: flex;
+	width: 38%;
+	min-width: 300px;
+	flex-direction: column;
+	border-inline-end: 1px solid var(--corsivo-mail-inbox-border);
+}
+
+.corsivo-mail-inbox__search {
+	display: flex;
+	align-items: flex-end;
+	gap: 6px;
+	padding: 10px 12px;
+	border-block-end: 1px solid var(--corsivo-mail-inbox-border);
+	background: var(--corsivo-mail-inbox-surface-muted);
+}
+
+.corsivo-mail-inbox__search-field {
+	min-width: 0;
+	flex: 1;
+}
+
+.corsivo-mail-inbox__message-list-content,
+.corsivo-mail-inbox__pane {
+	min-width: 0;
+	flex: 1;
+	overflow-y: auto;
+}
+
+.corsivo-mail-inbox__pane {
+	background: var(--corsivo-mail-inbox-surface);
+}
+
+.corsivo-mail-inbox__loading {
+	padding: 24px;
+	text-align: center;
+}
+
+.corsivo-mail-inbox__message {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px 14px;
+	border: 0;
+	border-block-end: 1px solid var(--corsivo-mail-inbox-border-soft);
+	border-inline-start: 3px solid transparent;
+	background: var(--corsivo-mail-inbox-surface);
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 400;
+	text-align: start;
+}
+
+.corsivo-mail-inbox__message:hover,
+.corsivo-mail-inbox__message:focus-visible {
+	background: var(--corsivo-mail-inbox-surface-muted);
+}
+
+.corsivo-mail-inbox__message:focus-visible {
+	position: relative;
+	z-index: 1;
+	outline: 2px solid var(--corsivo-mail-inbox-accent);
+	outline-offset: -2px;
+}
+
+.corsivo-mail-inbox__message.is-active {
+	border-inline-start-color: var(--corsivo-mail-inbox-accent);
+	background: var(--corsivo-mail-inbox-surface-active);
+}
+
+.corsivo-mail-inbox__message.is-unread {
+	font-weight: 600;
+}
+
+.corsivo-mail-inbox__message-meta {
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+	color: var(--corsivo-mail-inbox-text-muted);
+	font-size: 12px;
+}
+
+.corsivo-mail-inbox__message-sender {
+	max-width: 60%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.corsivo-mail-inbox__message-subject {
+	margin-block-start: 2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.corsivo-mail-inbox__load-more {
+	padding: 10px;
+	text-align: center;
+}
+
+.corsivo-mail-inbox__empty-list,
+.corsivo-mail-inbox__empty-pane {
+	color: var(--corsivo-mail-inbox-text-muted);
+}
+
+.corsivo-mail-inbox__empty-list {
+	padding: 20px;
+}
+
+.corsivo-mail-inbox__empty-pane {
+	padding: 24px;
+}
+
+.corsivo-mail-inbox__message-view {
+	min-height: 100%;
+}
+
+.corsivo-mail-inbox__message-header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 16px;
+	border-block-end: 1px solid var(--corsivo-mail-inbox-border);
+}
+
+.corsivo-mail-inbox__message-heading {
+	min-width: 0;
+}
+
+.corsivo-mail-inbox__message-heading h2 {
+	margin: 0 0 6px;
+}
+
+.corsivo-mail-inbox__message-address {
+	margin-block-start: 2px;
+	color: var(--corsivo-mail-inbox-text-muted);
+	font-size: 13px;
+	overflow-wrap: anywhere;
+}
+
+.corsivo-mail-inbox__message-actions {
+	display: flex;
+	flex-shrink: 0;
+	gap: 6px;
+}
+
+.corsivo-mail-inbox__attachments {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	padding: 10px 16px;
+	border-block-end: 1px solid var(--corsivo-mail-inbox-border-soft);
+}
+
+.corsivo-mail-inbox__attachment {
+	display: inline-block;
+	padding: 4px 10px;
+	border: 1px solid var(--corsivo-mail-inbox-border);
+	border-radius: 4px;
+	background: var(--corsivo-mail-inbox-surface-muted);
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.corsivo-mail-inbox__body-error,
+.corsivo-mail-inbox__inline-error,
+.corsivo-mail-inbox__dialog-error {
+	color: var(--corsivo-mail-inbox-danger);
+}
+
+.corsivo-mail-inbox__body-error {
+	padding: 16px;
+}
+
+.corsivo-mail-inbox__body-frame {
+	display: block;
+	width: 100%;
+	height: calc(74vh - 80px);
+	border: 0;
+}
+
+.corsivo-mail-inbox__compose {
+	display: flex;
+	box-sizing: border-box;
+	height: 100%;
+	padding: 16px;
+	flex-direction: column;
+}
+
+.corsivo-mail-inbox__compose-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-block-end: 8px;
+}
+
+.corsivo-mail-inbox__compose-body {
+	min-height: 0;
+	margin-block-start: 8px;
+	flex: 1;
+	overflow-y: auto;
+}
+
+.corsivo-mail-inbox__compose-actions {
+	margin-block-start: 12px;
+}
+
+.corsivo-mail-inbox__rich-text {
+	border: 1px solid var(--corsivo-mail-inbox-border);
+	border-radius: 4px;
+}
+
+.corsivo-mail-inbox__rich-text-toolbar {
+	display: flex;
+	gap: 4px;
+	padding: 6px;
+	border-block-end: 1px solid var(--corsivo-mail-inbox-border-soft);
+	background: var(--corsivo-mail-inbox-surface-muted);
+}
+
+.corsivo-mail-inbox__rich-text-button {
+	min-width: 34px;
+}
+
+.corsivo-mail-inbox__rich-text-input {
+	min-height: 220px;
+	padding: 12px 14px;
+	outline: none;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.corsivo-mail-inbox__rich-text-input:focus {
+	box-shadow: inset 0 0 0 1px var(--corsivo-mail-inbox-accent);
+}
+
+.corsivo-mail-inbox__confirm-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-block-start: 24px;
+}
+
+@media (max-width: 960px) {
+
+	.corsivo-mail-inbox__layout {
+		height: auto;
+		min-height: 74vh;
+		flex-wrap: wrap;
+	}
+
+	.corsivo-mail-inbox__rail {
+		display: grid;
+		width: 100%;
+		flex: 0 0 100%;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 8px;
+		border-inline-end: 0;
+		border-block-end: 1px solid var(--corsivo-mail-inbox-border);
+	}
+
+	.corsivo-mail-inbox__account + .corsivo-mail-inbox__rail-action,
+	.corsivo-mail-inbox__compose-trigger,
+	.corsivo-mail-inbox__account {
+		margin-block: 0;
+	}
+
+	.corsivo-mail-inbox__account {
+		grid-column: 1 / -1;
+	}
+
+	.corsivo-mail-inbox__message-list {
+		width: 42%;
+		min-width: 260px;
+	}
+
+	.corsivo-mail-inbox__pane {
+		min-height: 58vh;
+	}
+}
+
+@media (max-width: 782px) {
+
+	.corsivo-mail-inbox__message-list {
+		width: 100%;
+		min-width: 100%;
+		max-height: 38vh;
+		border-inline-end: 0;
+		border-block-end: 1px solid var(--corsivo-mail-inbox-border);
+	}
+
+	.corsivo-mail-inbox__pane {
+		min-width: 100%;
+	}
+
+	.corsivo-mail-inbox__message-header {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,190 @@
+.corsivo-mail-settings-app,
+.corsivo-mail-settings-fallback {
+	--corsivo-mail-settings-border: #c3c4c7;
+	--corsivo-mail-settings-border-soft: #dcdcde;
+	--corsivo-mail-settings-surface: #fff;
+	--corsivo-mail-settings-surface-muted: #f6f7f7;
+	--corsivo-mail-settings-success: #008a20;
+	--corsivo-mail-settings-danger: #b32d2e;
+	max-width: 760px;
+	margin-block-start: 12px;
+}
+
+.corsivo-mail-settings-app .corsivo-admin-ui-repeater__remove {
+	display: none;
+}
+
+.corsivo-mail-settings-app .corsivo-admin-ui-repeater__item-body {
+	padding: 16px;
+}
+
+.corsivo-mail-settings-app .corsivo-admin-ui-repeater__footer,
+.corsivo-mail-settings__submit {
+	margin-block-start: 16px;
+}
+
+.corsivo-mail-settings__default-badge {
+	display: inline-block;
+	margin-inline-start: 8px;
+	padding: 2px 6px;
+	border-radius: 2px;
+	background: var(--corsivo-mail-settings-surface-muted);
+	color: #50575e;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1.4;
+}
+
+.corsivo-mail-settings__field-grid,
+.corsivo-mail-settings__group-grid,
+.corsivo-mail-settings__server-grid {
+	display: grid;
+	gap: 16px;
+}
+
+.corsivo-mail-settings__field-grid,
+.corsivo-mail-settings__group-grid {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.corsivo-mail-settings__server-grid {
+	grid-template-columns: minmax(0, 1fr) 110px 170px;
+}
+
+.corsivo-mail-settings__field.is-wide {
+	grid-column: 1 / -1;
+}
+
+.corsivo-mail-settings__section {
+	margin: 20px 0 0;
+	padding: 16px 0 0;
+	border: 0;
+	border-block-start: 1px solid var(--corsivo-mail-settings-border-soft);
+}
+
+.corsivo-mail-settings__section legend {
+	margin-block-end: 12px;
+	padding: 0;
+	font-weight: 600;
+}
+
+.corsivo-mail-settings__section > .components-checkbox-control,
+.corsivo-mail-settings__section > .corsivo-mail-settings__field-grid,
+.corsivo-mail-settings__imap-test {
+	margin-block-start: 16px;
+}
+
+.corsivo-mail-settings__imap-test {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.corsivo-mail-settings__imap-test .corsivo-admin-ui-field-feedback {
+	margin: 0;
+}
+
+.corsivo-mail-settings__group-fields > .components-base-control,
+.corsivo-mail-settings__group-fields > .corsivo-admin-ui-field-feedback {
+	margin-block-start: 12px;
+}
+
+.corsivo-mail-settings__fallback-account,
+.corsivo-mail-settings__fallback-group {
+	margin: 12px 0;
+	border: 1px solid var(--corsivo-mail-settings-border);
+	background: var(--corsivo-mail-settings-surface);
+}
+
+.corsivo-mail-settings__fallback-account {
+	max-width: 760px;
+}
+
+.corsivo-mail-settings__fallback-account summary {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px 16px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.corsivo-mail-settings__fallback-account-body {
+	padding: 0 16px 16px;
+}
+
+.corsivo-mail-settings__fallback-remove {
+	text-align: end;
+}
+
+.corsivo-mail-settings__fallback-imap-test {
+	margin-block-start: 8px;
+}
+
+.ms-imap-result {
+	display: inline-block;
+	margin-inline-start: 8px;
+}
+
+.ms-imap-result.is-success {
+	color: var(--corsivo-mail-settings-success);
+}
+
+.ms-imap-result.is-error {
+	color: var(--corsivo-mail-settings-danger);
+}
+
+.corsivo-mail-settings__fallback-group {
+	display: flex;
+	max-width: 760px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 12px 16px;
+}
+
+.corsivo-mail-settings__fallback-group .regular-text {
+	min-width: 160px;
+	flex: 1;
+}
+
+.corsivo-mail-settings__fallback-dialog {
+	width: min(440px, calc(100vw - 32px));
+	padding: 24px;
+	border: 0;
+	box-shadow: 0 8px 32px rgb(0 0 0 / 24%);
+}
+
+.corsivo-mail-settings__fallback-dialog::backdrop {
+	background: rgb(0 0 0 / 35%);
+}
+
+.corsivo-mail-settings__fallback-dialog h2 {
+	margin-block-start: 0;
+	font-size: 18px;
+}
+
+.corsivo-mail-settings__fallback-dialog-actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+	margin-block-start: 24px;
+}
+
+@media (max-width: 782px) {
+
+	.corsivo-mail-settings__field-grid,
+	.corsivo-mail-settings__group-grid,
+	.corsivo-mail-settings__server-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.corsivo-mail-settings__imap-test {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.ms-imap-result {
+		margin-inline-start: 0;
+	}
+}

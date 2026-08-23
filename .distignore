@@ -1,0 +1,17 @@
+.git
+.gitignore
+.distignore
+admin-editor/node_modules
+admin-editor/src
+admin-editor/package.json
+admin-editor/package-lock.json
+inbox-app/node_modules
+inbox-app/src
+inbox-app/package.json
+inbox-app/package-lock.json
+settings-app/node_modules
+settings-app/src
+settings-app/package.json
+settings-app/package-lock.json
+tests
+*.zip

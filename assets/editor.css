@@ -1,0 +1,22 @@
+.corsivo-mail-content-slot {
+	border: 2px dashed #0067b8;
+	border-radius: 4px;
+	padding: 24px;
+	text-align: center;
+	background: #f4f9ff;
+}
+
+.corsivo-mail-content-slot__label {
+	display: inline-block;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-size: 12px;
+	color: #0067b8;
+}
+
+.corsivo-mail-content-slot__hint {
+	margin: 8px 0 0;
+	color: #555;
+	font-size: 13px;
+}

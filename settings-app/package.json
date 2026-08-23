@@ -1,0 +1,25 @@
+{
+  "name": "corsivo-mail-settings-app",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Progressive accounts and groups settings for Corsivo Mail",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "wp-scripts build src/index.js",
+    "check": "npm run lint && npm run test && npm run build && php ../tests/settings-ui-assets.php && php ../tests/settings-ui-enqueue-smoke.php && php ../tests/settings-ui-fallback-smoke.php && php ../tests/settings-ui-post-contract.php",
+    "lint": "wp-scripts lint-js src && node --check ../assets/settings.js && wp-scripts lint-style ../assets/settings.css",
+    "start": "wp-scripts start src/index.js",
+    "test": "wp-scripts test-unit-js --runInBand"
+  },
+  "dependencies": {
+    "@corsivo-suite/wp-admin-ui": "0.1.0",
+    "@wordpress/components": "36.1.0",
+    "@wordpress/element": "8.2.0",
+    "@wordpress/i18n": "6.23.0",
+    "@wordpress/icons": "15.4.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@wordpress/scripts": "32.6.0"
+  }
+}

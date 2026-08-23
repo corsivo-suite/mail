@@ -1,0 +1,24 @@
+{
+  "name": "corsivo-mail-admin-editor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gutenberg editor bundle for Corsivo Mail",
+  "license": "GPL-2.0-or-later",
+  "scripts": {
+    "build": "wp-scripts build src/index.js",
+    "check": "npm run lint && npm run test && npm run build && php ../tests/editor-assets.php && php ../tests/editor-enqueue-smoke.php",
+    "lint": "wp-scripts lint-js src && node --check ../assets/editor.js && node --check ../assets/email-editor.js",
+    "start": "wp-scripts start src/index.js",
+    "test": "wp-scripts test-unit-js --runInBand"
+  },
+  "dependencies": {
+    "@corsivo-suite/wp-admin-ui": "0.1.0",
+    "@wordpress/components": "36.1.0",
+    "@wordpress/element": "8.2.0",
+    "@wordpress/i18n": "6.23.0",
+    "@wordpress/icons": "15.4.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "32.6.0"
+  }
+}

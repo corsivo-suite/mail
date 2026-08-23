@@ -1,0 +1,28 @@
+= Unreleased — 23/08/2026 =
+* Rigenerati i bundle contro il package condiviso corrente, includendo il refresh visuale e gli asset RTL; contratti runtime invariati.
+
+= 0.23.4 — 21/08/2026 =
+* Editor Gutenberg compilato con wp-scripts e fallback deterministico agli asset classici quando la build non è completa.
+* Date e orari, ricerca utenti e contatti, destinatari manuali e colori email/footer migrati su @corsivo-suite/wp-admin-ui senza cambiare i metadati salvati.
+* Posta in arrivo migrata sulla build React autonoma con controlli condivisi, feedback operativi e fallback classico preservato.
+* Tab Account e Gruppi migrati su Repeater, ConfirmDialog e FieldFeedback condivisi, senza cambiare formati POST, cifratura o persistenza delle credenziali.
+* Aggiunti bundle CSS LTR/RTL, gate asset, smoke enqueue e test del contratto della pipeline privata.
+* I tre consumer incorporano il package privato nella propria build e non dipendono dal plugin showcase o dal registry npm a runtime.
+* Aggiunta la notice MIT di dnd-kit, incorporato transitivamente nei bundle che usano Repeater.
+
+= 0.23.3 — 18/08/2026 =
+* Aggiornato il blocco newsletter alla Block API v3 per la compatibilità con l’editor Gutenberg in iframe.
+
+= 0.23.2 — 04/08/2026 =
+* Corretto il footer dei wrapper automatici: l'opzione flottante ora controlla realmente il layout delle email inviate tramite wp_mail.
+= 0.23.1 — 01/08/2026 =
+* Accorpate le letture delle option di storage e Forms; eliminate verifica fisica per-admin, doppio reconcile e inizializzazioni seed già soddisfatte.
+* Marker storage plain e indipendenti dai salt, con verifica fisica fuori dal percorso caldo.
+* Payload della coda salvati come testo e JSON leggibili; cifratura limitata alle credenziali SMTP/IMAP.
+* Trasporto globale isolato dagli short-circuit altrui e stato delivery_unknown senza conferma wp_mail_succeeded.
+= 0.23.0 — 13/07/2026 =
+* Motore email con account SMTP multipli, coda InnoDB durevole, credenziali cifrate e journal operativo.
+* Template Gutenberg, automazioni, invii programmati e import/export portabile.
+* Moduli opzionali per newsletter, webmail IMAP, WPML, WooCommerce e Corsivo Theme.
+* Capability amministrative, unsubscribe HMAC e strumenti privacy per coda e log.
+
